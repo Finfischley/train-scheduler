@@ -1,0 +1,88 @@
+<!-- CReate Github repo -->
+<!-- Create project in Firebase -->
+<!-- manipulate html from employee mgmt file to suit styling of train schedule -->
+<!-- code js for train schedule  -->
+    <!-- trsin schedule section -->
+    <!-- train input section -->
+    <!-- functions to do math for arrival times -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/app.js"></script>
+    
+
+</head>
+<body>
+    <div class = "container">
+        <div class = "header jumbotron">
+            <h1 class = "">Train Schedule</h1>
+            <h4></h4>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h5 class="panel-title"><span class="glyphicon" aria-hidden="true"></span>Current Train Schedule</h5>
+            </div>
+            <div id = "trains" class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min)</th>
+                            <th id="next-arrival">Next Arrival</th>
+                            <th id="minutes-away">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="choochoo"></tbody>
+                </table>
+                
+
+            </div>
+            
+        </div>
+        <div class="panel panel-primary">
+             <div class="panel-heading">
+                <h5 class="panel-title"><span class="" aria-hidden="true"></span>Add Train</h5>
+            </div>
+            <div class="panel-body searchParameters">
+                <form>
+                    <div class="form-group">
+                        <p>Train Name</p>
+                        <input type="text" class="form-control" id="name-input">
+                    </div>
+                </form>
+
+                <form>
+                    <div class="form-group">
+                        <p>Destination</p>
+                        <input type="text" class="form-control" id="dest-input">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group">
+                        <p>First Train Time (HH:mm - military time)</p>
+                        <input type="text" class="form-control" id="fTime-input">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group">
+                        <p>Frequency (min)</p>
+                        <input type="text" class="form-control" id="freq-input">
+                    </div>
+                </form>
+                <button id = "add-train" type="button" class="btn btn-default" >
+                    <span class="" aria-hidden="true"></span>Submit
+                </button>
+             </div>
+        </div>
+
+
+</body>
+</html>
